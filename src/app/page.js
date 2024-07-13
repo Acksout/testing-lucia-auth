@@ -1,19 +1,12 @@
-import { MongodbAdapter } from "@lucia-auth/adapter-mongodb";
-import { Lucia } from "lucia";
-
+import {NextRouter} from "next/router.js";
+import Link from "next/link.js";
 export default function Home() {
-  const adapter = new MongodbAdapter(db); // your adapter
-  return (
-    <main>
-      <h1>Test</h1>
-    </main>
-  );
+    return (
+        <div>
+            <h1>Home</h1>
+            <Link href="/sign-up">SignUp</Link>
+        </div>
+    )
 }
-export const lucia = new Lucia(adapter, {
-  sessionCookie: {
-    attributes: {
-      // set to `true` when using HTTPS
-      secure: process.env.NODE_ENV === "production",
-    },
-  },
-});
+
+// Homepage

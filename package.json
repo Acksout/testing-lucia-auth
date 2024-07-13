@@ -2,6 +2,7 @@
   "name": "testing-lucia-auth",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,8 +11,11 @@
   },
   "dependencies": {
     "@lucia-auth/adapter-mongodb": "^1.0.3",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
     "lucia": "^3.2.0",
     "mongodb": "^6.8.0",
+    "mongoose": "^8.5.1",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18"
